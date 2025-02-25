@@ -1,0 +1,91 @@
+% !TeX root = ../main.tex
+
+\chapter{Beta Detection Module Outline}
+
+\section{Introduction}
+\begin{itemize}
+    \item $\upbeta$ 探测的重要性、应用场景、以及应用场景中对于低本底的需求。
+    \item 现存的 $\upbeta$ 探测器的方法，以及其优缺点（在低本底方面的不足）。
+    \item 本文的目标：设计一个新的 $\upbeta$ 探测器，以满足低本底的需求。
+\end{itemize}
+
+\section{Design of the Prototype System}
+\subsection{System Architecture}
+\begin{itemize}
+    \item 系统的整体架构，包括各个部分的功能和作用。
+    \item 各个部分之间的连接方式。
+\end{itemize}
+
+\subsection{Development of the Prototype TPC}
+\begin{itemize}
+    \item TPC 的制造原理。
+    \item TPC 的详细参数。
+    \item TPC 的工作条件。
+\end{itemize}
+
+\subsection{Scheme of the Readout Electronics}
+\begin{itemize}
+    \item 电子学各个部分的功能和作用。
+    \item 电子学的详细参数。
+\end{itemize}
+
+\subsubsection{Front-end Board (FEB)}
+\begin{itemize}
+    \item 输入级
+    \item CSA 电路
+    \item 单端转差分电路
+    \item 供电方案
+\end{itemize}
+
+\subsubsection{Data Processing Unit (DPU)}
+\begin{itemize}
+    \item 模拟数字转换器
+    \item 供电方案
+    \item 时钟方案
+\end{itemize}
+
+\subsubsection{FPGA Logic}
+\begin{itemize}
+    \item 逻辑设计
+\end{itemize}
+
+\section{Performance of the Prototype System}
+
+\subsection{Electronics Performance Test}
+\begin{itemize}
+    \item 电子学基线及噪声测试。
+    \item 电子学的线性度及动态范围测试。
+\end{itemize}
+
+\subsection{Test with X-ray Source}
+\begin{itemize}
+    \item X-ray 源的参数和测试条件。
+    \item 测试能谱结果。
+    \item Micromegas 增益非均匀性修正。
+\end{itemize}
+
+\subsection{Test with $\upbeta$ Source}
+\begin{itemize}
+    \item $\upbeta$ 源的参数和测试条件。
+    \item 径迹重建、击中位置分辨率。
+    \item 特征提取。
+\end{itemize}
+
+\subsection{Test with background radiation}
+\begin{itemize}
+    \item 本底的测试条件。
+    \item 特征提取，与 $\upbeta$ 特征的对比。
+\end{itemize}
+
+\subsection{Background Suppression Performance}
+\begin{itemize}
+    \item 基于决策树的本底抑制方法。
+    \item 本底抑制效果。
+\end{itemize}
+
+\section{Conclusion}
+\begin{itemize}
+    \item 本文设计的 $\upbeta$ 探测器的性能。
+    \item 本文设计的 $\upbeta$ 探测器的优点。
+    \item 未来的工作。
+\end{itemize}

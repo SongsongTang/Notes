@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "2ee8c129bffcc2da",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4449dffd628ee0b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "005d730a49a9c90c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Log/2024/9月太原Sr90源测试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cf748143f37c2db1",
+    "type": "split",
+    "children": [
+      {
+        "id": "73bea315789d4a03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b22481056cd68320",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f5aca4198afa9a58",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bc79323bb3dd0dda",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d67c1e4cc474c357",
+    "type": "split",
+    "children": [
+      {
+        "id": "7dc3c9e9312bf79b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30a30114b12d7e17",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Log/2024/9月太原Sr90源测试.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b41d5b788330f4da",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Log/2024/9月太原Sr90源测试.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4579eb61ddd24a90",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "01e3b28c4723acd2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Log/2024/9月太原Sr90源测试.md"
+              }
+            }
+          },
+          {
+            "id": "43d003c76e8134a4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false
+    }
+  },
+  "active": "005d730a49a9c90c",
+  "lastOpenFiles": [
+    "Log/2024/acmesh renew cert.md",
+    "Log/数据分析方法.md",
+    "Tritium/Experiment_Log/Experiment_Log.md",
+    "Tritium/Experiment_Log/Maps.md",
+    "Log/2024/09.md",
+    "Log/2024/9月太原Sr90源测试.md",
+    "Tritium/Experiment_Log/attachments/10minS.png",
+    "Tritium/Experiment_Log/attachments/AlphaBetaTPC.exe",
+    "Log/2024/08.md",
+    "Tritium/Experiment_Log/attachments/20240828212829_signal_bkg_12h_Map.png",
+    "Tritium/Experiment_Log/attachments/20240828212829_signal_bkg_12h_RawMap.png",
+    "Tritium/Experiment_Log/attachments/20240829172803_signal_bkg_12h_RawMap.png",
+    "Tritium/Experiment_Log/attachments/20240829172803_signal_bkg_12h_Map.png",
+    "Tritium/Experiment_Log/attachments/cNoCutMap.png",
+    "Tritium/Experiment_Log/attachments/20240830181853_baseline_big_C4H10_370V_wShield_MeanSigma.png",
+    "Tritium/Experiment_Log/attachments/20240830182047_baseline_big_C4H10_370V_woShield_MeanSigma.png",
+    "Tritium/Experiment_Log/attachments/20240812211715_signal_bkg_1h_Map.png",
+    "Tritium/Experiment_Log/attachments/20240812202438_signal_bkg_1h_Map.png",
+    "Log/2024/07.md",
+    "Log/2024/08",
+    "Tritium/Hardware/Data_Processing_Unit.md",
+    "Tritium/Software/DataProcessing.md",
+    "Solar-Blind/Notes/Notes.md",
+    "Log/2024",
+    "Log",
+    "Tritium/Hardware/Front_End_Board.md",
+    "Tritium/Hardware/[DPU_v0.drawio.md",
+    "Tritium/Hardware/attachments",
+    "Tritium/Experiment_Log/attachments",
+    "Untitled.canvas",
+    "Solar-Blind/HardWare/AnodeBoard/高压模块选型.md",
+    "Tritium/Experiment_Log",
+    "Solar-Blind/Notes/Untitled.md",
+    "Tritium/Hardware/前端板（FEB）.md",
+    "Tritium/Detector",
+    "Tritium/Software",
+    "Tritium/Hardware",
+    "Solar-Blind/Notes/Drafts.md",
+    "Solar-Blind/HardWare/AnodeBoard/尺寸结构.md",
+    "Solar-Blind/HardWare/AnodeBoard/连接器选型.md",
+    "Solar-Blind/HardWare/AnodeBoard/DW-P202-0.5CS1.md",
+    "Solar-Blind.md",
+    "Daily/First note.md",
+    "Daily/双向链接.md"
+  ]
+}

@@ -1,0 +1,67 @@
+\chapter{AXI 总线}
+\section{为什么要学习 AXI 总线}
+\begin{enumerate}
+    \item ZYNQ: 异构芯片，内部总线使用的 AXI 总线。
+    \item 纯 FPGA 的 IP 接口也要用 AXI 总线。
+    \item 想做高速接口，设计 PCIe、JESD204B、DDR3/4 (APP, AXI), SOC
+\end{enumerate}
+\section{什么是 AXI 总线}
+\paragraph{AXI 总线分类}
+\begin{enumerate}
+    \item AXI4-Full
+    \item AXI4-Lite
+    \item AXI4-Stream
+\end{enumerate}
+AXI: 不是 Xilinx 研发的，是ARM研发的，AMBA 其中的一个，AMBA包括（APB，AHB，AXI）。\par
+AXI 总线是一种突发总线，突发传输。一直连续的传输，比如说突发8次传输，就是指传输数据连续的传输8次，不需要每次都发起一次传输请求。\par
+\paragraph{AXI 的 5 个通道}
+\begin{enumerate}
+    \item 写地址通道
+    \item 写数据通道
+    \item 写响应通道
+    \item 读地址通道
+    \item 读数据通道
+\end{enumerate}
+\paragraph{波形解读}
+\begin{enumerate}
+    \item VALID 和 READY，同时为高代表当前数据有效。
+    \item 先写地址，紧接着写数据，最后一个数据跟随 LAST
+    \item 先读地址，紧接着读数据，最后一个数据跟随 LAST
+    \item 写完数据，有一个写响应，表示写成功。
+\end{enumerate}
+
+\section{使用 FPGA 实现 AXI 主接口}
+突发传输：1 2 4 8 16 32 64 128 256\par
+\subsection{AXI 写实现的步骤}
+\begin{enumerate}
+    \item 写首地址
+    \item 紧接着写首地址，突发传输数据
+    \item 控制LAST信号
+    \item LAST 脉冲之后，等待一个响应信号
+\end{enumerate}
+\subsection{AXI 读实现的步骤}
+\begin{enumerate}
+    \item 写首地址
+    \item 紧接着等待从机传输过来的数据，当有效信号和准备信号同时为高时，读出数据
+    \item 接收 LAST 信号
+\end{enumerate}
+\subsection{实现功能：}
+\begin{enumerate}
+    \item 向从机的0地址写1$\sim$16；
+    \item 读从机的0地址；
+\end{enumerate}
+\section{AXI 传输机制和死锁}
+\paragraph{Outstanding address 和 Out-of-order}
+\subparagraph{Outstanding address}
+AXI 总线的写地址和写数据时分离的，可以在写地址总线上连续发送两次地址，再依次传输写数据。
+\subparagraph{Out-of-order}
+多对多的情况下，针对不同ID，传输顺利可以任意的，AXI4中只针对从机有效。主机不支持。
+\paragraph{什么是死锁}
+AXI 总线发生异常，无法正常工作。
+\paragraph{为什么会产生死锁}
+没有严格遵守 AXI 总线协议
+\paragraph{AXI 产生死锁的情况(多对多)}
+\begin{enumerate}
+    \item 一个主机对多个从机，主机先发送 S3、S2、S1，由于S3 距离非常远，传输非常慢，而S1离得非常近，传输非常快。导致S1先收到了写地址信号，那么S1将会第一个占用M1。但是M1的传输必须是顺序的，第一占用的必须是S3，此时M1死锁。
+    \item 多主机对多从机（Out-of-order）：两个主机，第一主机发送相同ID到S1、S2.第二个主机发送相同的ID到S2、S1.但是，经过AXI桥，将ID扩展后，对于从机来说是不同ID，可以乱序传输。那么S1可能会先响应第二个主机，那么S2响应第一个主机。主机接收响应乱序，违反AXI4.0协议规范，死锁。
+\end{enumerate}
